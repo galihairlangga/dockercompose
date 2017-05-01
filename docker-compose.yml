@@ -1,0 +1,18 @@
+version: '2'
+services:
+  php:
+    image: putuafikavu29/php
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./app:/var/www/html
+    links:
+      - db
+
+  db:
+    image: galihh7/mysql
+    volumes:
+     - ./db:/var/lib/mysql
+    environment:
+     - MYSQL_ROOT_PASSWORD=galih
