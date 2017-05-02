@@ -11,7 +11,7 @@ services:
       - db
 
   db:
-    image: galihh7/mysql
+    image: yunirahma1/yuni
     volumes:
      - ./db:/var/lib/mysql
     environment:
